@@ -3,19 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA05014624D2B86500EC96ED /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05014524D2B86500EC96ED /* MapViewController.swift */; };
+		DA05014824D2B98300EC96ED /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05014724D2B98300EC96ED /* BoardViewController.swift */; };
+		DA05014A24D2B99300EC96ED /* BoardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05014924D2B99300EC96ED /* BoardTableViewController.swift */; };
 		DA6F013D24D056380099FF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F013C24D056380099FF71 /* AppDelegate.swift */; };
 		DA6F013F24D056380099FF71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F013E24D056380099FF71 /* SceneDelegate.swift */; };
 		DA6F014124D056380099FF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F014024D056380099FF71 /* ViewController.swift */; };
 		DA6F014424D056380099FF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6F014224D056380099FF71 /* Main.storyboard */; };
 		DA6F014624D056390099FF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6F014524D056390099FF71 /* Assets.xcassets */; };
 		DA6F014924D056390099FF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6F014724D056390099FF71 /* LaunchScreen.storyboard */; };
+		F12E97A916162A4F75C42FCC /* Pods_2020_07_31_2nd_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E18B7B12D6CD32E046AD68 /* Pods_2020_07_31_2nd_Project.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		377A0A765EEBC976301391B2 /* Pods-2020.07.31_2nd_Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2020.07.31_2nd_Project.release.xcconfig"; path = "Target Support Files/Pods-2020.07.31_2nd_Project/Pods-2020.07.31_2nd_Project.release.xcconfig"; sourceTree = "<group>"; };
+		88E18B7B12D6CD32E046AD68 /* Pods_2020_07_31_2nd_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2020_07_31_2nd_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3819B152BA2CFCD66C9CB7 /* Pods-2020.07.31_2nd_Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2020.07.31_2nd_Project.debug.xcconfig"; path = "Target Support Files/Pods-2020.07.31_2nd_Project/Pods-2020.07.31_2nd_Project.debug.xcconfig"; sourceTree = "<group>"; };
+		DA05014524D2B86500EC96ED /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DA05014724D2B98300EC96ED /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		DA05014924D2B99300EC96ED /* BoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTableViewController.swift; sourceTree = "<group>"; };
 		DA6F013924D056380099FF71 /* 2020.07.31_2nd_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2020.07.31_2nd_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6F013C24D056380099FF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA6F013E24D056380099FF71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +41,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12E97A916162A4F75C42FCC /* Pods_2020_07_31_2nd_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83DE01684FD62916BC692579 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88E18B7B12D6CD32E046AD68 /* Pods_2020_07_31_2nd_Project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D655B8A6E5EA870325D00A0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD3819B152BA2CFCD66C9CB7 /* Pods-2020.07.31_2nd_Project.debug.xcconfig */,
+				377A0A765EEBC976301391B2 /* Pods-2020.07.31_2nd_Project.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA05014224D2B5E200EC96ED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA6F014024D056380099FF71 /* ViewController.swift */,
+				DA05014524D2B86500EC96ED /* MapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA05014324D2B5E600EC96ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA05014424D2B5EA00EC96ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA05014724D2B98300EC96ED /* BoardViewController.swift */,
+				DA05014924D2B99300EC96ED /* BoardTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DA6F013024D056380099FF71 = {
 			isa = PBXGroup;
 			children = (
 				DA6F013B24D056380099FF71 /* 2020.07.31_2nd_Project */,
 				DA6F013A24D056380099FF71 /* Products */,
+				D655B8A6E5EA870325D00A0D /* Pods */,
+				83DE01684FD62916BC692579 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +111,11 @@
 		DA6F013B24D056380099FF71 /* 2020.07.31_2nd_Project */ = {
 			isa = PBXGroup;
 			children = (
+				DA05014424D2B5EA00EC96ED /* View */,
+				DA05014324D2B5E600EC96ED /* Model */,
+				DA05014224D2B5E200EC96ED /* Controller */,
 				DA6F013C24D056380099FF71 /* AppDelegate.swift */,
 				DA6F013E24D056380099FF71 /* SceneDelegate.swift */,
-				DA6F014024D056380099FF71 /* ViewController.swift */,
 				DA6F014224D056380099FF71 /* Main.storyboard */,
 				DA6F014524D056390099FF71 /* Assets.xcassets */,
 				DA6F014724D056390099FF71 /* LaunchScreen.storyboard */,
@@ -74,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA6F014D24D056390099FF71 /* Build configuration list for PBXNativeTarget "2020.07.31_2nd_Project" */;
 			buildPhases = (
+				5943BAA816441E43046F84F7 /* [CP] Check Pods Manifest.lock */,
 				DA6F013524D056380099FF71 /* Sources */,
 				DA6F013624D056380099FF71 /* Frameworks */,
 				DA6F013724D056380099FF71 /* Resources */,
+				D5B7CC8EF660199E20F96D72 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +192,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5943BAA816441E43046F84F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-2020.07.31_2nd_Project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5B7CC8EF660199E20F96D72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-2020.07.31_2nd_Project/Pods-2020.07.31_2nd_Project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-2020.07.31_2nd_Project/Pods-2020.07.31_2nd_Project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-2020.07.31_2nd_Project/Pods-2020.07.31_2nd_Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DA6F013524D056380099FF71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA05014A24D2B99300EC96ED /* BoardTableViewController.swift in Sources */,
 				DA6F014124D056380099FF71 /* ViewController.swift in Sources */,
 				DA6F013D24D056380099FF71 /* AppDelegate.swift in Sources */,
 				DA6F013F24D056380099FF71 /* SceneDelegate.swift in Sources */,
+				DA05014624D2B86500EC96ED /* MapViewController.swift in Sources */,
+				DA05014824D2B98300EC96ED /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +386,7 @@
 		};
 		DA6F014E24D056390099FF71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD3819B152BA2CFCD66C9CB7 /* Pods-2020.07.31_2nd_Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +405,7 @@
 		};
 		DA6F014F24D056390099FF71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 377A0A765EEBC976301391B2 /* Pods-2020.07.31_2nd_Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
