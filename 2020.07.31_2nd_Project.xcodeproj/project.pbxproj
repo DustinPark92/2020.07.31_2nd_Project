@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		DA05014624D2B86500EC96ED /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05014524D2B86500EC96ED /* MapViewController.swift */; };
 		DA05014824D2B98300EC96ED /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05014724D2B98300EC96ED /* BoardViewController.swift */; };
-		DA05014A24D2B99300EC96ED /* BoardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05014924D2B99300EC96ED /* BoardTableViewController.swift */; };
+		DA05014E24D2BAFC00EC96ED /* BoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05014D24D2BAFC00EC96ED /* BoardTableViewCell.swift */; };
+		DA05015024D2BD1200EC96ED /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05014F24D2BD1200EC96ED /* MainTabBarViewController.swift */; };
+		DA05015224D2BFFE00EC96ED /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05015124D2BFFE00EC96ED /* WriteViewController.swift */; };
 		DA6F013D24D056380099FF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F013C24D056380099FF71 /* AppDelegate.swift */; };
 		DA6F013F24D056380099FF71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F013E24D056380099FF71 /* SceneDelegate.swift */; };
 		DA6F014124D056380099FF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F014024D056380099FF71 /* ViewController.swift */; };
@@ -25,7 +27,9 @@
 		CD3819B152BA2CFCD66C9CB7 /* Pods-2020.07.31_2nd_Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2020.07.31_2nd_Project.debug.xcconfig"; path = "Target Support Files/Pods-2020.07.31_2nd_Project/Pods-2020.07.31_2nd_Project.debug.xcconfig"; sourceTree = "<group>"; };
 		DA05014524D2B86500EC96ED /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DA05014724D2B98300EC96ED /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
-		DA05014924D2B99300EC96ED /* BoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTableViewController.swift; sourceTree = "<group>"; };
+		DA05014D24D2BAFC00EC96ED /* BoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTableViewCell.swift; sourceTree = "<group>"; };
+		DA05014F24D2BD1200EC96ED /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		DA05015124D2BFFE00EC96ED /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		DA6F013924D056380099FF71 /* 2020.07.31_2nd_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2020.07.31_2nd_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6F013C24D056380099FF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA6F013E24D056380099FF71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,9 @@
 			children = (
 				DA6F014024D056380099FF71 /* ViewController.swift */,
 				DA05014524D2B86500EC96ED /* MapViewController.swift */,
+				DA05014724D2B98300EC96ED /* BoardViewController.swift */,
+				DA05014F24D2BD1200EC96ED /* MainTabBarViewController.swift */,
+				DA05015124D2BFFE00EC96ED /* WriteViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -84,8 +91,7 @@
 		DA05014424D2B5EA00EC96ED /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DA05014724D2B98300EC96ED /* BoardViewController.swift */,
-				DA05014924D2B99300EC96ED /* BoardTableViewController.swift */,
+				DA05014D24D2BAFC00EC96ED /* BoardTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,11 +245,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA05014A24D2B99300EC96ED /* BoardTableViewController.swift in Sources */,
 				DA6F014124D056380099FF71 /* ViewController.swift in Sources */,
 				DA6F013D24D056380099FF71 /* AppDelegate.swift in Sources */,
 				DA6F013F24D056380099FF71 /* SceneDelegate.swift in Sources */,
+				DA05015024D2BD1200EC96ED /* MainTabBarViewController.swift in Sources */,
 				DA05014624D2B86500EC96ED /* MapViewController.swift in Sources */,
+				DA05014E24D2BAFC00EC96ED /* BoardTableViewCell.swift in Sources */,
+				DA05015224D2BFFE00EC96ED /* WriteViewController.swift in Sources */,
 				DA05014824D2B98300EC96ED /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

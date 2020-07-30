@@ -1,5 +1,5 @@
 //
-//  MapViewController.swift
+//  MainTabBarViewController.swift
 //  2020.07.31_2nd_Project
 //
 //  Created by Dustin on 2020/07/30.
@@ -7,19 +7,18 @@
 //
 
 import UIKit
-import MapKit
+import Floaty
 
-class MapViewController: UIViewController {
-
-    @IBOutlet weak var mapView: MKMapView!
-    
+class MainTabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
+
+
 
 
 }
