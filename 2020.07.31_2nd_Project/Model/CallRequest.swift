@@ -10,34 +10,59 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+enum StatusCode : Int {
+    case success = 200
+    case fail = 500
+
+}
+
+
 //네트워크 통신
 
 class CallRequest {
     
-     let url = "http://192.168.0.2:32769/posts/"
+     //let url = "http://192.168.0.2:32769/posts"
+     
     //1.클로저 = success 함수이름 , json -> 반환값 없음.
     //3.클로저 @escaping 나 탈출한다~
     //4.JSON -> 타입을 정해준다.
-    func post(method : HTTPMethod, param: [String : Any]? = nil, success : @escaping(JSON) -> ()) {
+    func post(method : HTTPMethod, param: [String : Any]? = nil,url : String ,id : Int? = nil, success : @escaping(JSON) -> ()) {
                 //1.Post Parameter
         
         
-               AF.request(url, method: method, parameters: param).validate().responseJSON { response in
-               switch response.result {
-     
-               case .success(let value):
-                   let json = JSON(value)
-                   //2.클로저 = 함수자체를 매개변수로 해주겠다.
-                   
-                   success(json)
+        AF.request(url, method: method, parameters: param).validate().responseJSON { response in
+            
+            let statusCode = StatusCode(rawValue: response.response?.statusCode ?? 500)
+            
+            switch statusCode {
+            case .success:
+                switch response.result {
+                case .success(let value):
+                    let json = JSON(value)
+                    //2.클로저 = 함수자체를 매개변수로 해주겠다.
+                    
+                    success(json)
+                 
+                 print(json)
+                    case .failure(let error):
+                         
+                        print(error)
+                    }
+                    
                 
-                print(json)
-                   case .failure(let error):
-                        
-                       print(error)
-                   }
-                       
-               }
+                case .fail: print("서버 에러")
+                
+            default : print("서버 에러")
+                
+                
+            }
+            
+        }
+        
+            
+          
+        
+
 
         
         

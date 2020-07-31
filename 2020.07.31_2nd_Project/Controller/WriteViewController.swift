@@ -47,7 +47,7 @@ class WriteViewController: UIViewController {
             "like" : true
         ]
         
-        networkModel.post(method: .post, param: param) { json in
+        networkModel.post(method: .post, param: param,url:networkModel.url) { json in
             print("success")
             
             

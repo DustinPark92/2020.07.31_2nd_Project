@@ -23,7 +23,7 @@ class BoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        tableView.estimatedRowHeight = UITableView.automaticDimension
 
         
        configureFloatBtn()
@@ -42,7 +42,7 @@ class BoardViewController: UIViewController {
         boardModel.removeAll()
         
         
-        networkModel.post(method: .get) { json in
+        networkModel.post(method: .get,url:networkModel.url) { json in
                         for item in json.array! {
                       
                             
@@ -115,6 +115,7 @@ extension BoardViewController : UITableViewDelegate,UITableViewDataSource {
         let item = boardModel[indexPath.row]
         
         cell.contentsLabel.text = item.content
+        cell.contentsLabel.numberOfLines = 0
         cell.nicknameLabel.text = item.uid
         cell.dateLabel.text = item.regdate
         if item.like {
@@ -123,6 +124,45 @@ extension BoardViewController : UITableViewDelegate,UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+
+        
+//        let sb = UIStoryboard.init(name: "Main", bundle: nil)
+//        let vc = sb.instantiateViewController(withIdentifier: "WriteViewController") as! WriteViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        vc.modalTransitionStyle = .coverVertical
+//
+//        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    
+           let deleteAction = UIContextualAction(style: .destructive, title:  "삭제", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+    
+               success(true)
+            self.networkModel.post(method: .delete, url: self.networkModel.url+"/\(self.boardModel[indexPath.row].id)") { json in
+                self.fetchPost()
+            }
+
+           })
+
+           let shareAction = UIContextualAction(style: .normal, title:  "수정", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+
+               success(true)
+
+           })
+
+           return UISwipeActionsConfiguration(actions:[shareAction,deleteAction])
+
+       }
+    
+    
     
     
     
