@@ -12,6 +12,8 @@
 		DA05014E24D2BAFC00EC96ED /* BoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05014D24D2BAFC00EC96ED /* BoardTableViewCell.swift */; };
 		DA05015024D2BD1200EC96ED /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05014F24D2BD1200EC96ED /* MainTabBarViewController.swift */; };
 		DA05015224D2BFFE00EC96ED /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05015124D2BFFE00EC96ED /* WriteViewController.swift */; };
+		DA6C66EE24D434A70072B3B8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C66ED24D434A70072B3B8 /* Model.swift */; };
+		DA6C66F024D4389F0072B3B8 /* CallRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C66EF24D4389F0072B3B8 /* CallRequest.swift */; };
 		DA6F013D24D056380099FF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F013C24D056380099FF71 /* AppDelegate.swift */; };
 		DA6F013F24D056380099FF71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F013E24D056380099FF71 /* SceneDelegate.swift */; };
 		DA6F014124D056380099FF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F014024D056380099FF71 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 		DA05014D24D2BAFC00EC96ED /* BoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTableViewCell.swift; sourceTree = "<group>"; };
 		DA05014F24D2BD1200EC96ED /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		DA05015124D2BFFE00EC96ED /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		DA6C66ED24D434A70072B3B8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DA6C66EF24D4389F0072B3B8 /* CallRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRequest.swift; sourceTree = "<group>"; };
 		DA6F013924D056380099FF71 /* 2020.07.31_2nd_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2020.07.31_2nd_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6F013C24D056380099FF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA6F013E24D056380099FF71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 		DA05014324D2B5E600EC96ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA6C66ED24D434A70072B3B8 /* Model.swift */,
+				DA6C66EF24D4389F0072B3B8 /* CallRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA6C66EE24D434A70072B3B8 /* Model.swift in Sources */,
 				DA6F014124D056380099FF71 /* ViewController.swift in Sources */,
 				DA6F013D24D056380099FF71 /* AppDelegate.swift in Sources */,
 				DA6F013F24D056380099FF71 /* SceneDelegate.swift in Sources */,
@@ -253,6 +260,7 @@
 				DA05014E24D2BAFC00EC96ED /* BoardTableViewCell.swift in Sources */,
 				DA05015224D2BFFE00EC96ED /* WriteViewController.swift in Sources */,
 				DA05014824D2B98300EC96ED /* BoardViewController.swift in Sources */,
+				DA6C66F024D4389F0072B3B8 /* CallRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -382,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

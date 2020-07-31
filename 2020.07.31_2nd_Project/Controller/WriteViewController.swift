@@ -9,6 +9,7 @@
 import UIKit
 
 class WriteViewController: UIViewController {
+    var networkModel = CallRequest()
 
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
@@ -17,6 +18,8 @@ class WriteViewController: UIViewController {
         configureUI()
         configureNavBar()
     }
+    
+
     
     func configureUI() {
         tabBarController?.tabBar.isHidden = true
@@ -37,6 +40,21 @@ class WriteViewController: UIViewController {
     }
 
     @objc func handleWriteDone() {
+        
+        let param : [String : Any ] = [
+            "testuser" : 2,
+            "content" : textView.text ?? "",
+            "like" : true
+        ]
+        
+        networkModel.post(method: .post, param: param) { json in
+            print("success")
+            
+            
+            
+        }
+        
+        
         navigationController?.popViewController(animated: true)
         
         

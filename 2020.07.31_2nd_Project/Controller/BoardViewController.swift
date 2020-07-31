@@ -8,15 +8,61 @@
 
 import UIKit
 import Floaty
+import Alamofire
+import SwiftyJSON
 
 class BoardViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+
+    
+    var networkModel = CallRequest()
+    
+    var boardModel : [BoardModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+    
+
+        
        configureFloatBtn()
         configureTableView()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        fetchPost()
+        
+        
+    }
+    
+    func fetchPost() {
+        boardModel.removeAll()
+        
+        
+        networkModel.post(method: .get) { json in
+                        for item in json.array! {
+                      
+                            
+        var data = BoardModel(id: item["id"].intValue, content: item["content"].stringValue, uid: item["testuser"]["uid"].stringValue, like: item["like"].boolValue, regdate: item["created_at"].stringValue)
+                            
+                            
+                            //class로 만들었을떄,
+        //                  var data = BoardModel()
+        //                data.id = item["id"].intValue
+        //                data.content  = item["content"].stringValue
+        //                data.uid = item["testuser"]["uid"].stringValue
+                        self.boardModel.append(data)
+                    
+                           
+                    
+                        }
+                    
+                     self.tableView.reloadData()
+                }
+        
         
     }
     
@@ -25,6 +71,8 @@ class BoardViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+ 
     
     
     func configureFloatBtn() {
@@ -42,6 +90,10 @@ class BoardViewController: UIViewController {
             
             floaty.close()
         }
+        
+        floaty.addItem(title: "업로드") { item in
+            print(123)
+        }
      
         self.view.addSubview(floaty)
     }
@@ -54,11 +106,20 @@ class BoardViewController: UIViewController {
 
 extension BoardViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return boardModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BoardTableViewCell", for: indexPath) as! BoardTableViewCell
+        
+        let item = boardModel[indexPath.row]
+        
+        cell.contentsLabel.text = item.content
+        cell.nicknameLabel.text = item.uid
+        cell.dateLabel.text = item.regdate
+        if item.like {
+            cell.likedBtn.tintColor = .red
+        }
         
         return cell
     }
